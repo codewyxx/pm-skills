@@ -22,6 +22,9 @@ Use this skill when:
 
 ---
 
+## Admin and back-office domain rules
+
+For B-end, admin, operations, or back-office PRDs, load the `admin-product-design` skill if it is available before drafting requirements. Its references govern lists, forms, permissions, status flows, batch operations, exports, notifications, menus, data display, uploads, and weighted sorting. Record any deviation under `差异点`.
 ## Operational Workflow
 
 ### Phase 1: Discovery (The Interview)

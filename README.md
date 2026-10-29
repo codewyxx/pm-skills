@@ -2,7 +2,7 @@
 
 > 一组按工作流分组的 Agent Skills，面向产品管理、工程设计、界面设计与营销分析。
 
-本仓库整理了 **13 个**可直接被支持 Agent Skills 的工具读取的技能。每个 Skill 都是一个包含 `SKILL.md` 的独立目录，相关脚本、模板和参考文档均随 Skill 保留。
+本仓库整理了 **14 个**可直接被支持 Agent Skills 的工具读取的技能。每个 Skill 都是一个包含 `SKILL.md` 的独立目录，相关脚本、模板和参考文档均随 Skill 保留。
 
 ## 目录结构
 
@@ -12,7 +12,8 @@ pm-skills/
     ├── product/
     │   ├── prd/
     │   ├── brainstorming/
-    │   └── writing-plans/
+    │   ├── writing-plans/
+    │   └── admin-product-design/
     ├── engineering/
     │   ├── executing-plans/
     │   ├── subagent-driven-development/
@@ -37,6 +38,7 @@ pm-skills/
 | [`prd`](skills/product/prd/SKILL.md) | 生成结构化、可评审的产品需求文档（PRD） |
 | [`brainstorming`](skills/product/brainstorming/SKILL.md) | 在开始创作或实现前，澄清目标、约束和可行方案 |
 | [`writing-plans`](skills/product/writing-plans/SKILL.md) | 将已确认的需求和设计拆成可执行、可验证的实施计划 |
+| [`admin-product-design`](skills/product/admin-product-design/SKILL.md) | B 端与运营后台的产品设计规则包：列表、表单、权限、状态流转、批量操作、导出、通知、菜单与排序 |
 
 ### 工程流程
 
@@ -62,6 +64,17 @@ pm-skills/
 | Skill | 用途 |
 |---|---|
 | [`analytics`](skills/marketing/analytics/SKILL.md) | 规划、配置、审计和改进分析埋点，覆盖 GA4、GTM、事件设计等场景 |
+
+### Agent 运行时参考
+
+`admin-product-design` 采用渐进式披露：
+
+- `SKILL.md` 只负责触发条件、加载策略和全局约束；
+- `references/index.md` 按任务路由到具体规范；
+- `references/manifest.yaml` 提供机器可读的触发词和引用关系；
+- 具体规范按列表、表单、反馈、状态与批量操作、权限、展示与媒体、通知、导出、后台菜单、加权排序拆分。
+
+每条规则使用 `MUST`、`DEFAULT`、`PENDING` 标记。Agent 只加载当前任务匹配的 reference，避免把全部规范一次性注入上下文。原始业务文档不包含在本仓库中。
 
 ## 安装
 
@@ -106,6 +119,7 @@ cp -R pm-skills/skills/*/* ~/.agents/skills/
 /brainstorming
 /prd
 /writing-plans
+/admin-product-design
 /frontend-design
 /analytics
 ```
@@ -116,11 +130,12 @@ cp -R pm-skills/skills/*/* ~/.agents/skills/
 brainstorming
 prd
 writing-plans
+admin-product-design
 ```
 
 ## 上游来源
 
-本仓库是技能集合，不修改 Skill 的原始内容。主要上游来源如下：
+本仓库汇集多个来源。除 `admin-product-design` 外，Skill 内容基本保留上游原文；为说明联动，`prd` 和 `frontend-design` 增加了指向 `admin-product-design` 的说明段。主要来源如下：
 
 | 上游仓库 | 本仓库中的 Skill |
 |---|---|
@@ -128,6 +143,7 @@ writing-plans
 | [github/awesome-copilot](https://github.com/github/awesome-copilot) | `prd` |
 | [anthropics/skills](https://github.com/anthropics/skills) | `frontend-design` |
 | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | `analytics` |
+| 本仓库整理（基于团队产品设计规范脱敏改写） | `admin-product-design` |
 
 ### 关于 `analytics`
 
