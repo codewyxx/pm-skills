@@ -4,6 +4,12 @@
 
 本仓库整理了 **16 个**可直接被支持 Agent Skills 的工具读取的技能。每个 Skill 都是一个包含 `SKILL.md` 的独立目录，相关脚本、模板和参考文档均随 Skill 保留。
 
+## 文档
+
+- [Skill 总览：能力、定位、场景、示例与文件结构](docs/README.md)
+- [产品产物与文档结构](docs/artifacts.md)
+- 每个 Skill 的独立说明位于 `docs/skills/`
+
 ## 目录结构
 
 ```text
