@@ -1,6 +1,6 @@
 ---
 name: product-brief
-description: 'Use at the start of a feature, change request, or internal tool request when a non-PM needs to turn an ambiguous ask into a concise, testable product brief. Covers problem, users, outcome, MVP scope, alternatives, success metrics, assumptions, risks, and a go/no-go recommendation before PRD, UX, technical design, or planning.'
+description: 'Use at the start of a feature, change request, or internal tool request when a non-PM needs to turn an ambiguous ask into a concise, testable product brief. Covers problem, users, outcome, MVP scope, alternatives, success metrics, assumptions, risks, and a go/no-go recommendation before PRD or product planning.'
 license: MIT
 ---
 
@@ -85,7 +85,7 @@ license: MIT
 - 交给 `prd` 展开用户故事、验收标准和完整需求；
 - 如涉及后台业务规则，同时加载 `admin-product-design`；
 - 如涉及界面，交给 UX flow 或 `frontend-design`；
-- 如进入技术设计，交给 `solution-design`；若尚未安装，则先使用本 Skill 的 handoff contract 保留输入。
+- 如处于完整产品工作流中，由 `pm-orchestrator` 管理后续策略、体验、PRD、指标与评审；如已有明确产品方向，则直接交给 `prd`。
 
 ## Required brief schema
 
@@ -123,6 +123,6 @@ Recommendation: go | pilot | defer | reject | needs-discovery
 Change size: S | M | L
 Primary metric: ...
 MVP: ...
-Next skill: prd | admin-product-design | solution-design | none
+Next skill: prd | admin-product-design | pm-orchestrator | none
 Open blockers: ...
 ```

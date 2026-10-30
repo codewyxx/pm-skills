@@ -107,6 +107,6 @@
 | FEAT-001 | Feature |  |  |
 | REQ-001 | Requirement to expand in PRD |  |  |
 
-**Next skill:** `prd` / `admin-product-design` / `solution-design` / `none`
+**Next skill:** `prd` / `admin-product-design` / `pm-orchestrator` / `none`
 
 **Handoff notes:**

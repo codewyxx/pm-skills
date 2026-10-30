@@ -14,9 +14,8 @@ pm-skills/
     │   ├── brainstorming/
     │   ├── writing-plans/
     │   ├── admin-product-design/
-    │   └── product-brief/
-    ├── delivery/
-    │   └── feature-orchestrator/
+    │   ├── product-brief/
+    │   └── pm-orchestrator/
     ├── engineering/
     │   ├── executing-plans/
     │   ├── subagent-driven-development/
@@ -38,17 +37,13 @@ pm-skills/
 
 | Skill | 用途 |
 |---|---|
+| [`pm-orchestrator`](skills/product/pm-orchestrator/SKILL.md) | 面向非产品经理的 PM 工作总入口：按 S/M/L 路由产品工作，检查问题、价值、范围、体验、指标和交接门禁 |
 | [`prd`](skills/product/prd/SKILL.md) | 生成结构化、可评审的产品需求文档（PRD） |
 | [`brainstorming`](skills/product/brainstorming/SKILL.md) | 在开始创作或实现前，澄清目标、约束和可行方案 |
 | [`writing-plans`](skills/product/writing-plans/SKILL.md) | 将已确认的需求和设计拆成可执行、可验证的实施计划 |
 | [`admin-product-design`](skills/product/admin-product-design/SKILL.md) | B 端与运营后台的产品设计规则包：列表、表单、权限、状态流转、批量操作、导出、通知、菜单与排序 |
 | [`product-brief`](skills/product/product-brief/SKILL.md) | 将模糊需求转成一页可评审的产品简报：问题、用户、价值、MVP、指标、风险与 go/no-go 建议 |
 
-### 交付编排
-
-| Skill | 用途 |
-|---|---|
-| [`feature-orchestrator`](skills/delivery/feature-orchestrator/SKILL.md) | 从需求到上线的总入口：按 S/M/L 路由、切换产品/UX/研发/测试/运维视角、检查阶段门禁并安排下一 Skill |
 
 
 ### 工程流程
@@ -87,7 +82,7 @@ pm-skills/
 
 每条规则使用 `MUST`、`DEFAULT`、`PENDING` 标记。Agent 只加载当前任务匹配的 reference，避免把全部规范一次性注入上下文。原始业务文档不包含在本仓库中。
 
-`product-brief` 使用模板、质量门禁和示例保证非产品经理也能稳定产出简报；`feature-orchestrator` 使用路线图、角色视角和门禁控制整个 PLAN 与 DESIGN 流程。
+`product-brief` 使用模板、质量门禁和示例保证非产品经理也能稳定产出简报；`pm-orchestrator` 使用 PM 路线图、六类产品视角和 G0–G6 门禁控制从需求到 PRD 交接的产品工作。
 
 ## 安装
 
@@ -129,7 +124,7 @@ cp -R pm-skills/skills/*/* ~/.agents/skills/
 支持用户显式调用 Skill 的 Agent 可以直接使用：
 
 ```text
-/feature-orchestrator
+/pm-orchestrator
 /product-brief
 /brainstorming
 /prd
@@ -142,7 +137,7 @@ cp -R pm-skills/skills/*/* ~/.agents/skills/
 支持 `skill` 工具的 Agent 也可以通过精确的 Skill 名称加载，例如：
 
 ```text
-feature-orchestrator
+pm-orchestrator
 product-brief
 brainstorming
 prd
@@ -161,7 +156,7 @@ admin-product-design
 | [anthropics/skills](https://github.com/anthropics/skills) | `frontend-design` |
 | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | `analytics` |
 | 本仓库整理（基于团队产品设计规范脱敏改写） | `admin-product-design` |
-| 本仓库原创整理 | `product-brief`、`feature-orchestrator` |
+| 本仓库原创整理 | `product-brief`、`pm-orchestrator` |
 
 ### 关于 `analytics`
 

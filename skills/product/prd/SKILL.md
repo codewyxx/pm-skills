@@ -24,7 +24,7 @@ Use this skill when:
 
 ## Upstream product inputs
 
-For a new or ambiguous request, load `product-brief` before drafting the PRD. For a multi-stage delivery that must move from request through design, testing, and release, use `feature-orchestrator` as the entry point. Keep the PRD focused on requirements, not technical design or test planning.
+For a new or ambiguous request, load `product-brief` before drafting the PRD. For a complete product-manager workflow that moves from request through brief, strategy, experience, PRD, metrics, and review, use `pm-orchestrator` as the entry point. Keep the PRD focused on product requirements, not technical design or test planning.
 
 ## Admin and back-office domain rules
 
