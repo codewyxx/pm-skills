@@ -8,6 +8,9 @@
 
 - [Skill 总览：能力、定位、场景、示例与文件结构](docs/README.md)
 - [产品产物与文档结构](docs/artifacts.md)
+- [三条技能线 × Skill 映射](docs/skill-lines-mapping.md)
+- [业务本体模板（先例 → 本体的抽象框架）](docs/ontology-template.md)
+- [先例文档模板（含语义卡片）](docs/precedent-template.md)
 - 每个 Skill 的独立说明位于 `docs/skills/`
 
 ## 目录结构
